@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+
+        applicationId "com.sourcepad.armory.android"
+        versionCode versions.versionCode
+        versionName versions.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+
+        debug {
+            applicationIdSuffix ".debug"
+        }
+        staging {
+            applicationIdSuffix ".staging"
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("../sourcepad_debug.jks")
+            storePassword "p4ssw0rd"
+            keyAlias "sourcepad_debug"
+            keyPassword "p4ssw0rd"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlinVersion"
+    implementation "androidx.appcompat:appcompat:$libraries.appCompat"
+    implementation "androidx.core:core-ktx:$libraries.appCompat"
+    implementation "com.google.android.material:material:$libraries.material"
+    implementation "androidx.constraintlayout:constraintlayout:$libraries.constraintLayout"
+    implementation "androidx.core:core-ktx:$libraries.appCompat"
+    implementation "androidx.preference:preference-ktx:$libraries.appCompat"
+    implementation "androidx.transition:transition:1.2.0"
+    implementation "androidx.multidex:multidex:$libraries.multidex"
+
+    //Architecture Components
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$libraries.archLifecycle"
+    implementation "androidx.navigation:navigation-fragment-ktx:$libraries.archLifecycle"
+    implementation "androidx.navigation:navigation-ui-ktx:$libraries.archLifecycle"
+
+    implementation "org.koin:koin-androidx-ext:$libraries.koin"
+    implementation project(":core")
+
+
+    testImplementation "junit:junit:$libraries.junit"
+    androidTestImplementation "androidx.test.ext:junit:$libraries.junitExt"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$libraries.espressoCore"
+
+}

@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+
+        debug {
+        }
+        staging {
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlinVersion"
+    implementation "androidx.appcompat:appcompat:$libraries.appCompat"
+    implementation "androidx.core:core-ktx:$libraries.appCompat"
+    implementation "com.google.android.material:material:$libraries.material"
+
+    implementation project(":database")
+    implementation project(":webservice")
+
+
+    testImplementation "junit:junit:$libraries.junit"
+    androidTestImplementation "androidx.test.ext:junit:$libraries.junitExt"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$libraries.espressoCore"
+}
