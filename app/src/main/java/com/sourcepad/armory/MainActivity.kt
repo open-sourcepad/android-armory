@@ -1,8 +1,9 @@
-package com.sourcepad.armory.android
+package com.sourcepad.armory
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ProgressBar
+import com.sourcepad.armory.android.R
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,4 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+
+
 }

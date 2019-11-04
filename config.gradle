@@ -45,6 +45,6 @@ ext.libraries = [
         koin                     : "2.0.1",
 
         //Database
-        room                     : "2.2.0"
+        room                     : "2.2.1"
 
 ]

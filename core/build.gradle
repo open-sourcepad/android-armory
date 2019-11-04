@@ -32,13 +32,21 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlinVersion"
     implementation "androidx.appcompat:appcompat:$libraries.appCompat"
     implementation "androidx.core:core-ktx:$libraries.appCompat"
+    implementation "org.koin:koin-core:$libraries.koin"
     implementation "com.google.android.material:material:$libraries.material"
 
     implementation project(":database")
     implementation project(":webservice")
 
-
+    testImplementation "androidx.test.ext:truth:$libraries.truth"
+    testImplementation "androidx.arch.core:core-testing:$libraries.archLifecycle"
+    testImplementation "org.robolectric:robolectric:$libraries.robolectric"
     testImplementation "junit:junit:$libraries.junit"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$libraries.coroutinesCore"
+    testImplementation "com.squareup.okhttp3:mockwebserver:$libraries.mockWebserver"
+    testImplementation "org.koin:koin-test:$libraries.koin"
+
+
     androidTestImplementation "androidx.test.ext:junit:$libraries.junitExt"
     androidTestImplementation "androidx.test.espresso:espresso-core:$libraries.espressoCore"
 }

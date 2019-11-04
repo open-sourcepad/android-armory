@@ -1,4 +1,4 @@
-package com.sourcepad.armory.android
+package com.sourcepad.armory
 
 import com.sourcepad.armory.core.BaseActivity
 
