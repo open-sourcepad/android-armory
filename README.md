@@ -129,13 +129,13 @@ Dynamic resources - ```<type> <name> <value>```
 ```groovy 
   buildTypes {
         debug {
-            resValue "string" "app_name" "Android Armory Dev"
+            resValue ("string", "app_name", "Android Armory Dev")
         }
         staging {
-            resValue "string" "app_name" "Android Armory Staging"
+            resValue ("string", "app_name", "Android Armory Staging")
         }
         release {
-            resValue "string" "app_name" "Android Armory"
+            resValue ("string", "app_name", "Android Armory")
             //....
         }
     }
