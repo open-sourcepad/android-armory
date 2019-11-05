@@ -61,3 +61,83 @@ testImplementation "androidx.room:room-testing:$room_version"
 
  ```
  
+ ## Development Guidelines
+ 
+Layout Files
+
+| Component       | Class Name             | Layout Name                   |
+| --------------- | ---------------------- | ----------------------------- |
+| Activity        | `LoginActivity`        | `activity_login.xml`          |
+| Fragment        | `ProfileFragment`      | `fragment_profile.xml`        |
+| Dialog          | `NoInternetDialog`     | `dialog_no_internet.xml`      |
+| ViewHolder      | `ProductVH`            | `item_product.xml`            |
+
+
+Views
+
+| View            | ID                | 
+| --------------- | ----------------- | 
+| TextView        | `@+id/name_tv`    |
+| EditText        | `@+id/name_et`    | 
+| ImageView       | `@+id/avatar_iv`  | 
+| Button          | `@+id/save_btn`   | 
+| ImageButton     | `@+id/like_ib`    | 
+
+Drawables
+
+| Drawable        | ID              | 
+| --------------- | --------------- | 
+| Icon            | `ic_delete`     |
+| Background      | `bg_rainbow`    | 
+| Logo            | `logo_golf`     | 
+| Selector        | `selector_fave` | 
+| Shape           | `circle_orange` | 
+
+Views as variables
+
+| View            | Name         | 
+| --------------- | ------------ | 
+| TextView        | `nameTv`     |
+| EditText        | `nameEt`     | 
+| ImageView       | `avatarIv`   | 
+| Button          | `saveBtn`    | 
+| ImageButton     | `likeIb`     | 
+| Recyclerview    | `productsRv` | 
+
+Settings up different URLs for debug,staging,release builds
+```groovy
+
+    buildTypes {
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://\"")
+        }
+        staging {
+            buildConfigField("String", "BASE_URL", "\"https://\"")
+        }
+        release {
+            buildConfigField("String", "BASE_URL", "\"https://\"")
+            //....
+        }
+    }
+
+```
+```kotlin 
+val baseUrl:String = BuildConfig.BASE_URL
+```
+
+Dynamic resources - ```<type> <name> <value>```
+```groovy 
+  buildTypes {
+        debug {
+            resValue "string" "app_name" "Android Armory Dev"
+        }
+        staging {
+            resValue "string" "app_name" "Android Armory Staging"
+        }
+        release {
+            resValue "string" "app_name" "Android Armory"
+            //....
+        }
+    }
+```
+```R.string.app_name```
