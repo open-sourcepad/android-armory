@@ -7,6 +7,6 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.sourcepad.armory.android.MainFragment" />
+        android:name="com.sourcepad.armory.MainFragment" />
 
 </navigation>

@@ -35,7 +35,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlinVersion"
     implementation "androidx.appcompat:appcompat:$libraries.appCompat"
-    implementation "androidx.core:core-ktx:$libraries.appCompat"
+    implementation "androidx.core:core-ktx:$libraries.ktxCore"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$libraries.coroutinesCore"
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$libraries.ktxSerializationRuntime"
     implementation "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:$libraries.ktxSerializationConverter"
@@ -45,7 +45,7 @@ dependencies {
 
     testImplementation "junit:junit:$libraries.junit"
     testImplementation "androidx.test.ext:truth:$libraries.truth"
-    testImplementation "androidx.arch.core:core-testing:$libraries.archLifecycle"
+    testImplementation "androidx.arch.core:core-testing:$libraries.coreTesting"
     testImplementation "org.robolectric:robolectric:$libraries.robolectric"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$libraries.coroutinesCore"
     testImplementation "com.squareup.okhttp3:mockwebserver:$libraries.mockWebserver"
