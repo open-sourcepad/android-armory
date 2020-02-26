@@ -16,6 +16,11 @@ android {
         versionName versions.versionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    buildFeatures{
+        viewBinding = true
+    }
+
     buildTypes {
 
         debug {

@@ -29,9 +29,15 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api "androidx.core:core-ktx:$libraries.ktxCore"
+    api "androidx.lifecycle:lifecycle-livedata-ktx:$libraries.archLifeCycle"
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:$libraries.archLifeCycle"
+    api "androidx.lifecycle:lifecycle-runtime-ktx:$libraries.archLifeCycle"
+
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlinVersion"
     implementation "androidx.appcompat:appcompat:$libraries.appCompat"
-    implementation "androidx.core:core-ktx:$libraries.ktxCore"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$libraries.coroutinesCore"
     implementation "org.koin:koin-core:$libraries.koin"
     implementation "com.google.android.material:material:$libraries.material"
 
