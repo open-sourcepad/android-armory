@@ -33,6 +33,8 @@ dependencies {
     api "androidx.lifecycle:lifecycle-livedata-ktx:$libraries.archLifeCycle"
     api "androidx.lifecycle:lifecycle-viewmodel-ktx:$libraries.archLifeCycle"
     api "androidx.lifecycle:lifecycle-runtime-ktx:$libraries.archLifeCycle"
+    api "com.greyblocks:gatekeeper:$libraries.gateKeeper"
+
 
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlinVersion"
