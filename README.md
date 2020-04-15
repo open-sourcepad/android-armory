@@ -5,7 +5,7 @@
 * **Dependency Injection - Koin**
 https://github.com/InsertKoinIO/koin
  ```groovy 
- koin_version = '2.1.0-alpha-1'
+ koin_version = '2.1.5'
 
 implementation "org.koin:koin-core:$koin_version"
 implementation "org.koin:koin-android:$koin_version"
@@ -20,7 +20,7 @@ https://github.com/Kotlin/kotlinx.serialization
  ```groovy 
  //Project Level
  buildscript {
-    ext.kotlin_version = '1.3.50'
+    ext.kotlin_version = '1.3.70'
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
     }
@@ -60,6 +60,14 @@ implementation "androidx.room:room-ktx:$room_version"
 testImplementation "androidx.room:room-testing:$room_version"
 
  ```
+
+
+* **Testing**
+
+Mockito https://mockk.io/
+```groovy
+testImplementation "io.mockk:mockk:{version}"
+```
  
  ## Development Guidelines
  
