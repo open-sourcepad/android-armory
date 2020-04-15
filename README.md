@@ -81,15 +81,15 @@ Layout Files
 | ViewHolder      | `ProductVH`            | `item_product.xml`            |
 
 
-Views
+Views(Use ViewBinding)
 
 | View            | ID                | 
 | --------------- | ----------------- | 
-| TextView        | `@+id/name_tv`    |
-| EditText        | `@+id/name_et`    | 
-| ImageView       | `@+id/avatar_iv`  | 
-| Button          | `@+id/save_btn`   | 
-| ImageButton     | `@+id/like_ib`    | 
+| TextView        | `@+id/nameTv`    |
+| EditText        | `@+id/nameEt`    | 
+| ImageView       | `@+id/avatarIv`  | 
+| Button          | `@+id/saveBtn`   | 
+| ImageButton     | `@+id/likeIb`    | 
 
 Drawables
 
@@ -100,17 +100,6 @@ Drawables
 | Logo            | `logo_golf`     | 
 | Selector        | `selector_fave` | 
 | Shape           | `circle_orange` | 
-
-Views as variables
-
-| View            | Name         | 
-| --------------- | ------------ | 
-| TextView        | `nameTv`     |
-| EditText        | `nameEt`     | 
-| ImageView       | `avatarIv`   | 
-| Button          | `saveBtn`    | 
-| ImageButton     | `likeIb`     | 
-| Recyclerview    | `productsRv` | 
 
 Settings up different URLs for debug,staging,release builds
 ```groovy
