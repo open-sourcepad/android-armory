@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion versions.compileSdk
@@ -70,6 +70,9 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$libraries.espressoCore"
 
     testImplementation "io.mockk:mockk:1.9.3"
+
+    implementation 'com.google.firebase:firebase-messaging:20.2.4'
+
 
 
 }

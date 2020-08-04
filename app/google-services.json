@@ -1,0 +1,191 @@
+{
+  "project_info": {
+    "project_number": "995130640196",
+    "firebase_url": "https://sourcepad-rd.firebaseio.com",
+    "project_id": "sourcepad-rd",
+    "storage_bucket": "sourcepad-rd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995130640196:android:17a34e02857f207d56f911",
+        "android_client_info": {
+          "package_name": "com.sourcepad.armory.android.debug"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995130640196-d83dv9hrdevr88k3mkliacvb98l3jf14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwiIpXv67cx32ccczvjyZMcBINQ39HNQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995130640196-g45d4ntgsh9pgtd5epi5g3oqf1goggm7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "995130640196-na6b03m3v1h1kvb3vgqv9l3r5rkaq8dd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "idah.GSheet"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995130640196:android:b2ddb9031e07a8cf56f911",
+        "android_client_info": {
+          "package_name": "com.sourcepad.spgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995130640196-d83dv9hrdevr88k3mkliacvb98l3jf14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwiIpXv67cx32ccczvjyZMcBINQ39HNQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995130640196-g45d4ntgsh9pgtd5epi5g3oqf1goggm7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "995130640196-na6b03m3v1h1kvb3vgqv9l3r5rkaq8dd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "idah.GSheet"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995130640196:android:80e5169da78f2eac56f911",
+        "android_client_info": {
+          "package_name": "com.sourcepad.spgo.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995130640196-d83dv9hrdevr88k3mkliacvb98l3jf14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwiIpXv67cx32ccczvjyZMcBINQ39HNQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995130640196-g45d4ntgsh9pgtd5epi5g3oqf1goggm7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "995130640196-na6b03m3v1h1kvb3vgqv9l3r5rkaq8dd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "idah.GSheet"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995130640196:android:8c97901a425a299f56f911",
+        "android_client_info": {
+          "package_name": "com.sourcepad.splabs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995130640196-d83dv9hrdevr88k3mkliacvb98l3jf14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwiIpXv67cx32ccczvjyZMcBINQ39HNQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995130640196-g45d4ntgsh9pgtd5epi5g3oqf1goggm7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "995130640196-na6b03m3v1h1kvb3vgqv9l3r5rkaq8dd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "idah.GSheet"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995130640196:android:0f92447c0c231e5056f911",
+        "android_client_info": {
+          "package_name": "com.sourcepad.splabs.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995130640196-d83dv9hrdevr88k3mkliacvb98l3jf14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwiIpXv67cx32ccczvjyZMcBINQ39HNQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995130640196-g45d4ntgsh9pgtd5epi5g3oqf1goggm7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "995130640196-na6b03m3v1h1kvb3vgqv9l3r5rkaq8dd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "idah.GSheet"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

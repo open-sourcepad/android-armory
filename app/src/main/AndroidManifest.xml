@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.sourcepad.armory.android">
 
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,6 +21,19 @@
             </intent-filter>
         </activity>
         <activity android:name="com.sourcepad.armory.OnBoardingActivity" />
+
+        <service
+            android:name="com.sourcepad.armory.PushService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/push_test" />
+
     </application>
 
 </manifest>
