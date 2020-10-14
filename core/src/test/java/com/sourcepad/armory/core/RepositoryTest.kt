@@ -26,13 +26,13 @@ import org.koin.test.inject
 @ExperimentalCoroutinesApi
 @Config(sdk = [Build.VERSION_CODES.O])
 @RunWith(RobolectricTestRunner::class)
-class RepositoryTest : AutoCloseKoinTest() {
+class RepositoryTest  {
 
     @Rule
     @JvmField
     val instantExecutorRule = InstantTaskExecutorRule()
 
-    private val server: MockWebServer by inject()
+    private val server= MockWebServer()
 
     @Before
     fun setup() {

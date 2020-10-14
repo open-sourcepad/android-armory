@@ -1,6 +1,9 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-kapt'
+
 android {
 
     compileSdkVersion versions.compileSdk
@@ -24,7 +27,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 
+}
+
+kapt {
+    correctErrorTypes true
 }
 
 dependencies {
@@ -40,7 +54,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlinVersion"
     implementation "androidx.appcompat:appcompat:$libraries.appCompat"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$libraries.coroutinesCore"
-    implementation "org.koin:koin-core:$libraries.koin"
     implementation "com.google.android.material:material:$libraries.material"
 
     implementation project(":database")
@@ -52,9 +65,14 @@ dependencies {
     testImplementation "junit:junit:$libraries.junit"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$libraries.coroutinesCore"
     testImplementation "com.squareup.okhttp3:mockwebserver:$libraries.mockWebserver"
-    testImplementation "org.koin:koin-test:$libraries.koin"
-
 
     androidTestImplementation "androidx.test.ext:junit:$libraries.junitExt"
     androidTestImplementation "androidx.test.espresso:espresso-core:$libraries.espressoCore"
+
+    implementation "com.google.dagger:hilt-android:$libraries.daggerHilt"
+    kapt "com.google.dagger:hilt-android-compiler:$libraries.daggerHilt"
+
+
+
+
 }

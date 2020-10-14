@@ -28,6 +28,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 
 }
 
@@ -41,7 +48,6 @@ dependencies {
     implementation "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:$libraries.ktxSerializationConverter"
     implementation "com.squareup.retrofit2:retrofit:$libraries.retrofit"
     implementation "com.squareup.okhttp3:logging-interceptor:$libraries.loggingInterceptor"
-    implementation "org.koin:koin-core:$libraries.koin"
 
     testImplementation "junit:junit:$libraries.junit"
     testImplementation "androidx.test.ext:truth:$libraries.truth"
@@ -49,5 +55,11 @@ dependencies {
     testImplementation "org.robolectric:robolectric:$libraries.robolectric"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$libraries.coroutinesCore"
     testImplementation "com.squareup.okhttp3:mockwebserver:$libraries.mockWebserver"
-    testImplementation "org.koin:koin-test:$libraries.koin"
+
+    implementation "com.google.dagger:hilt-android:$libraries.daggerHilt"
+    annotationProcessor "com.google.dagger:hilt-android-compiler:$libraries.daggerHilt"
+
+    testImplementation "com.google.dagger:hilt-android-testing:$libraries.daggerHilt"
+    testAnnotationProcessor "com.google.dagger:hilt-android-compiler:$libraries.daggerHilt"
+
 }
