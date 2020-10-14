@@ -1,9 +1,16 @@
 package com.sourcepad.armory.db
 
-import org.koin.dsl.module
+import dagger.Binds
+import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ApplicationComponent
+import javax.inject.Singleton
 
-val dbModule = module {
+@Module
+@InstallIn(ApplicationComponent::class)
+object DBModule {
 
-    //TODO
+
+
 
 }

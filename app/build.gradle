@@ -71,7 +71,6 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$libraries.navigation"
     implementation "androidx.navigation:navigation-ui-ktx:$libraries.navigation"
 
-    implementation "org.koin:koin-androidx-ext:$libraries.koin"
     implementation project(":core")
 
 

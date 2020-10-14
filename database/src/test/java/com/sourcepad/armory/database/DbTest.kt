@@ -9,15 +9,13 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.koin.core.context.startKoin
-import org.koin.test.AutoCloseKoinTest
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 
 @ExperimentalCoroutinesApi
 @Config(sdk = [Build.VERSION_CODES.O])
 @RunWith(RobolectricTestRunner::class)
-class WebServiceTest : AutoCloseKoinTest() {
+class WebServiceTest {
 
     @Rule
     @JvmField
@@ -27,9 +25,7 @@ class WebServiceTest : AutoCloseKoinTest() {
     @Before
     fun setup() {
 
-        startKoin {
-            //Override modules here
-        }
+
     }
 
     @After

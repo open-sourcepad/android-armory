@@ -7,7 +7,6 @@ import android.widget.ProgressBar
 import androidx.activity.viewModels
 import com.sourcepad.armory.android.R
 import dagger.hilt.android.AndroidEntryPoint
-import org.koin.androidx.viewmodel.ext.android.viewModel
 import javax.inject.Inject
 
 
@@ -20,10 +19,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        Log.d("Joed", "Viewmodel ${viewModel.repository}")
-
     }
-
 
 }

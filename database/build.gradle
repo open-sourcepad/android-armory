@@ -47,7 +47,6 @@ dependencies {
     kapt "androidx.room:room-compiler:$libraries.room"
     implementation "androidx.room:room-runtime:$libraries.room"
     implementation "androidx.room:room-ktx:$libraries.room"
-    implementation "org.koin:koin-core:$libraries.koin"
 
     testImplementation "junit:junit:$libraries.junit"
     testImplementation "androidx.test.ext:truth:$libraries.truth"
@@ -55,7 +54,6 @@ dependencies {
     testImplementation "org.robolectric:robolectric:$libraries.robolectric"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$libraries.coroutinesCore"
     testImplementation "com.squareup.okhttp3:mockwebserver:$libraries.mockWebserver"
-    testImplementation "org.koin:koin-test:$libraries.koin"
 
     implementation "com.google.dagger:hilt-android:$libraries.daggerHilt"
     annotationProcessor "com.google.dagger:hilt-android-compiler:$libraries.daggerHilt"
