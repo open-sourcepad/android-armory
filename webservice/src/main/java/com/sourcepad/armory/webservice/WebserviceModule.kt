@@ -5,8 +5,8 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonConfiguration
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -35,12 +35,14 @@ object WebserviceModule {
             .build()
     }
 
+    @ExperimentalSerializationApi
     @Binds
     @Singleton
     fun provideRetrofit(httpClient: OkHttpClient): Retrofit {
-        val mediaType = "application/json".toMediaType()
+        val contentType = "application/json".toMediaType()
         return Retrofit.Builder()
-            .addConverterFactory(Json(JsonConfiguration.Stable).asConverterFactory(mediaType))
+            .addConverterFactory(Json.asConverterFactory(contentType))
+//            .addConverterFactory(Json(JsonConfiguration.Stable).asConverterFactory(mediaType))
             .client(httpClient)
             .baseUrl(BuildConfig.BASE_URL)
             .build()

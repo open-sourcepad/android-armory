@@ -31,7 +31,7 @@ apply plugin: 'kotlinx-serialization'
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.13.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.0-RC2"
 }
  ```
 

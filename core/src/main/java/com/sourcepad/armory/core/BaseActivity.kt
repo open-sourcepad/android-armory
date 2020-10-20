@@ -6,7 +6,7 @@ import androidx.appcompat.widget.Toolbar
 
 abstract class BaseActivity : AppCompatActivity() {
 
-    protected var toolbar: Toolbar? = null
+    private var toolbar: Toolbar? = null
 
     protected open fun setupToolbar() {
         toolbar?.run {

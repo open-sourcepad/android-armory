@@ -24,27 +24,16 @@ class AccountRepository {
 //    }
 
 
-    fun login(username: String, password: String) =  flow<Resource<Unit>> {
+    fun login(username: String, password: String) = flow<Resource<Unit>> {
 
-
-
-        yield()
         emit(Resource.Loading())
 
-//        Might not be needed, need to verify
-//        withContext(Dispatchers.IO){
-//
-//        }
         try {
-
+            emit(Resource.Success(Unit))
         } catch (e: Exception) {
-
+            emit(Resource.Error(e.localizedMessage?:""))
         }
 
-
-
-
-        emit(Resource.Success(Unit))
     }
 
 

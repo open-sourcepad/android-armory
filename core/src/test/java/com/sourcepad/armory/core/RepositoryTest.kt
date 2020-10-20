@@ -11,12 +11,9 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.koin.core.context.startKoin
-import org.koin.test.AutoCloseKoinTest
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import java.net.HttpURLConnection
-import org.koin.test.inject
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -36,10 +33,6 @@ class RepositoryTest  {
 
     @Before
     fun setup() {
-
-        startKoin {
-            //Override modules here
-        }
         server.start()
     }
 

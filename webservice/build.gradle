@@ -44,7 +44,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$libraries.appCompat"
     implementation "androidx.core:core-ktx:$libraries.ktxCore"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$libraries.coroutinesCore"
-    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$libraries.ktxSerializationRuntime"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:$libraries.ktxSerializationJson"
     implementation "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:$libraries.ktxSerializationConverter"
     implementation "com.squareup.retrofit2:retrofit:$libraries.retrofit"
     implementation "com.squareup.okhttp3:logging-interceptor:$libraries.loggingInterceptor"
