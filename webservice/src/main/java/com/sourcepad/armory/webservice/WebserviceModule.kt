@@ -4,9 +4,8 @@ import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFact
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.components.SingletonComponent
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonConfiguration
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -15,7 +14,7 @@ import javax.inject.Singleton
 
 
 @Module
-@InstallIn(ApplicationComponent::class)
+@InstallIn(SingletonComponent::class)
 object WebserviceModule {
 
 
@@ -40,7 +39,7 @@ object WebserviceModule {
     fun provideRetrofit(httpClient: OkHttpClient): Retrofit {
         val mediaType = "application/json".toMediaType()
         return Retrofit.Builder()
-            .addConverterFactory(Json(JsonConfiguration.Stable).asConverterFactory(mediaType))
+            .addConverterFactory(Json.asConverterFactory(mediaType))
             .client(httpClient)
             .baseUrl(BuildConfig.BASE_URL)
             .build()
