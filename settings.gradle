@@ -1,2 +1,6 @@
-include ':app', ':core', ':webservice', ':database'
-rootProject.name='Android Armory'
+rootProject.name = 'Android Armory'
+
+include ':app', ':core', ':webservice', ':data'
+include ':shared-model'
+include ':shared-ui'
+include ':user-management'

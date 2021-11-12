@@ -1,0 +1,77 @@
+plugins {
+    id "com.android.library"
+    id "kotlin-android"
+    id "org.jetbrains.kotlin.android"
+    id "kotlin-kapt"
+}
+
+android {
+    compileSdk versions.compileSdk
+
+    defaultConfig {
+        minSdk versions.minSdk
+        targetSdk versions.targetSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libraries.compose
+    }
+
+    buildTypes {
+        staging {}
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+
+    api "androidx.core:core-ktx:$libraries.ktxCore"
+    api "androidx.lifecycle:lifecycle-livedata-ktx:$libraries.archLifeCycle"
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:$libraries.archLifeCycle"
+    api "androidx.lifecycle:lifecycle-runtime-ktx:$libraries.archLifeCycle"
+    api "androidx.appcompat:appcompat:$libraries.appCompat"
+    api "com.google.android.material:material:${libraries.material}"
+
+    api "androidx.activity:activity-compose:$libraries.activityCompose"
+    api "androidx.lifecycle:lifecycle-viewmodel-compose:$libraries.viewModelCompose"
+    api "androidx.navigation:navigation-compose:$libraries.navigationCompose"
+    api "androidx.compose.runtime:runtime-livedata:$libraries.compose"
+
+    api "androidx.hilt:hilt-navigation-compose:$libraries.hiltNavCompose"
+    api "androidx.compose.runtime:runtime:$libraries.compose"
+    api "androidx.compose.ui:ui:$libraries.compose"
+    api "androidx.compose.animation:animation:$libraries.compose"
+    api "androidx.compose.ui:ui-util:$libraries.compose"
+    api "androidx.compose.ui:ui-tooling:$libraries.compose"
+    api "androidx.compose.foundation:foundation-layout:$libraries.compose"
+    api "androidx.compose.foundation:foundation:$libraries.compose"
+    api "androidx.compose.material:material:$libraries.compose"
+    api "androidx.compose.material:material-icons-core:$libraries.compose"
+    api "androidx.compose.material:material-icons-extended:$libraries.compose"
+
+    api "com.google.accompanist:accompanist-insets:$libraries.accompanist"
+    api "com.google.accompanist:accompanist-swiperefresh:$libraries.accompanist"
+
+    api "io.coil-kt:coil-compose:$libraries.coil"
+    api("io.coil-kt:coil:$libraries.coil")
+
+}

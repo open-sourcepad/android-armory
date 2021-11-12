@@ -7,11 +7,11 @@ buildscript {
 
     repositories {
         google()
-        jcenter()
+        mavenCentral()
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.0-beta05'
+        classpath 'com.android.tools.build:gradle:7.2.0-alpha04'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlinVersion"
         classpath "org.jetbrains.kotlin:kotlin-serialization:$versions.kotlinVersion"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$libraries.daggerHilt"
@@ -22,11 +22,21 @@ buildscript {
     }
 }
 
+
+
 allprojects {
     repositories {
         google()
-        jcenter()
-
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven {
+            url = uri("https://maven.pkg.github.com/jecsan/gatekeeper")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USER")
+                password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_PERSONAL_ACCESS_TOKEN")
+            }
+        }
+        gradlePluginPortal()
     }
 }
 

@@ -7,13 +7,10 @@ apply plugin: 'kotlin-kapt'
 android {
 
     compileSdkVersion versions.compileSdk
-    buildToolsVersion versions.buildToolsVersion
 
     defaultConfig {
         minSdkVersion versions.minSdk
         targetSdkVersion versions.targetSdk
-        versionCode 1
-        versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -51,12 +48,12 @@ dependencies {
 
 
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlinVersion"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.kotlinVersion"
     implementation "androidx.appcompat:appcompat:$libraries.appCompat"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$libraries.coroutinesCore"
     implementation "com.google.android.material:material:$libraries.material"
+    implementation project(':data')
 
-    implementation project(":database")
     implementation project(":webservice")
 
     testImplementation "androidx.test.ext:truth:$libraries.truth"

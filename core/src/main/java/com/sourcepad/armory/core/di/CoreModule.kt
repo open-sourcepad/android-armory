@@ -1,6 +1,6 @@
 package com.sourcepad.armory.core.di
 
-import com.sourcepad.armory.core.template.AccountRepository
+import com.sourcepad.armory.core.repository.AccountRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
